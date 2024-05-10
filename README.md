@@ -1,61 +1,55 @@
-# Image gallery
+# Stopwatch
 
-> A simple
+> A simple stopwatch with `start`, `stop` and `reset` functionalities.
 
 ## Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+- [Stopwatch](#stopwatch)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Code Examples](#code-examples)
+  - [Status](#status)
 
 ## General info
 
-> The objective of the project is to practice separation of concern in
-> JavaScript.
+> The objective of the project is to practice separation of concerns in
+> JavaScript and use `setInterval` and `clearInterval` APIs.
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/screenshot.png)
 
 ## Technologies
 
 - JavaScript
 - HTML5
 - CSS3
-- VSC code
+- VS Code
 
 ## Setup
 
-clone the repo and start using the stop watch.
+Clone the repo and run `npm` install.
 
 ## Code Examples
 
 ```js
+const startHandler = () => {
+	if (data.intervalId) {
+		clearInterval(data.intervalId);
+	}
 
+	data.intervalId = setInterval(() => {
+		const newData = updateTime(data);
+
+		//update dom
+		updateTimeComponent(dom.time, newData);
+	}, 10);
+};
 ```
-
-## Features
-
-List of features ready and Todos for future development
-
--
--
--
-
-To-do list:
-
--
--
 
 ## Status
 
-Project is: _in progress_
-
-## Inspiration
-
-## Contact
+Project is: _done_
